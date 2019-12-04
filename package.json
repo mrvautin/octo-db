@@ -1,10 +1,10 @@
 {
-  "name": "db-son",
+  "name": "octo-db",
   "version": "1.0.0",
-  "description": "",
+  "description": "A flatfile JSON db for prototyping",
   "main": "index.js",
   "scripts": {
-    "test": "jest --runInBand"
+    "test": "jest"
   },
   "jest": {
     "verbose": true,
@@ -15,8 +15,8 @@
       "js"
     ]
   },
-  "author": "",
-  "license": "ISC",
+  "author": "mrvautin",
+  "license": "MIT",
   "dependencies": {
     "lodash": "^4.17.15",
     "uuid": "^3.3.3"
