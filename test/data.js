@@ -22,7 +22,20 @@ const customer2 = {
     phone: '0412345678'
 };
 
+const customer3 = {
+    email: 'james.alexander@test.com',
+    firstName: 'James',
+    lastName: 'Alexander',
+    address1: '1 Smith Street',
+    address2: '',
+    country: 'Scotland',
+    state: '',
+    postcode: '3000',
+    phone: '0412345678'
+};
+
 module.exports = {
     customer1,
-    customer2
+    customer2,
+    customer3
 }
