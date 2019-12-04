@@ -24,13 +24,15 @@ test('Update single record', async () => {
 });
 
 test('Update multiple records', async () => {
-    const result = await db.insert(testData.customer1);
+    await db.insert(testData.customer1);
+    await db.insert(testData.customer2);
 
     const update = await db.update({
-        uid: result.uid
+        country: 'Australia'
     },{
-        email: 'sarah.jones@gmail.com'
+        country: 'Scotland'
     });
 
-    expect(update[0].email).toBe('sarah.jones@gmail.com');
+    expect(update.length).toBe(2);
+    expect(update[0].country).toBe('Scotland');
 });
