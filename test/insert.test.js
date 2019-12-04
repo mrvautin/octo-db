@@ -11,12 +11,7 @@ beforeEach(async() => {
     await db.flushDb();
 });
 
-test('[Success] Remove single record', async () => {
+test('Insert a record', async () => {
     const result = await db.insert(testData.customer1);
-
-    const remove = await db.remove({
-        uid: result.uid
-    });
-
-    expect(remove[0].uid).toBe(result.uid);
+    expect(result.email).toBe(testData.customer1.email);
 });
